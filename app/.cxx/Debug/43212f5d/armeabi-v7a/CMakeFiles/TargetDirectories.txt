@@ -1,0 +1,3 @@
+/home/joseantonio/Escritorio/DemoGoingFasterCPP/DemoGoingFasterCPP/app/.cxx/Debug/43212f5d/armeabi-v7a/CMakeFiles/processimg.dir
+/home/joseantonio/Escritorio/DemoGoingFasterCPP/DemoGoingFasterCPP/app/.cxx/Debug/43212f5d/armeabi-v7a/CMakeFiles/edit_cache.dir
+/home/joseantonio/Escritorio/DemoGoingFasterCPP/DemoGoingFasterCPP/app/.cxx/Debug/43212f5d/armeabi-v7a/CMakeFiles/rebuild_cache.dir

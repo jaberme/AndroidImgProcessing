@@ -1,0 +1,6 @@
+# ninja log v5
+0	470	0	CMakeFiles/processimg.dir/src/main/cpp/processimg.cpp.o	bf62e73ce747e50d
+0	588	0	CMakeFiles/processimg.dir/src/main/cpp/processimg_neon.cpp.o	2500b8ebb17889b1
+588	690	0	../../../../build/intermediates/cmake/debug/obj/armeabi-v7a/libprocessimg.so	f4edad27f61971fb
+0	440	0	CMakeFiles/processimg.dir/src/main/cpp/processimg.cpp.o	bf62e73ce747e50d
+440	532	0	../../../../build/intermediates/cmake/debug/obj/armeabi-v7a/libprocessimg.so	f4edad27f61971fb
