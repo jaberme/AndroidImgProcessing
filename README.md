@@ -1,4 +1,4 @@
-# DemoGoingFasterCPP
+# Android Image Processing 
 
 Este es un proyecto de Android que demuestra el procesamiento de imágenes de alto rendimiento en tiempo real desde la cámara del dispositivo. La aplicación captura el feed de la cámara, aplica varias transformaciones de imagen y las muestra en la pantalla, destacando la diferencia de rendimiento entre las implementaciones en Java y C++ nativo.
 
