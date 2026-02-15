@@ -1,0 +1,3 @@
+/home/hunter/AndroidStudioProjects/DemoGoingFasterCPP/app/.cxx/Debug/68693d4i/x86_64/CMakeFiles/processimg.dir
+/home/hunter/AndroidStudioProjects/DemoGoingFasterCPP/app/.cxx/Debug/68693d4i/x86_64/CMakeFiles/edit_cache.dir
+/home/hunter/AndroidStudioProjects/DemoGoingFasterCPP/app/.cxx/Debug/68693d4i/x86_64/CMakeFiles/rebuild_cache.dir
