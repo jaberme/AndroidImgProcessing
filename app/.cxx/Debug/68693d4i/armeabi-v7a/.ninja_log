@@ -1,9 +1,6 @@
 # ninja log v5
-1270	1422	1771157233652786012	../../../../build/intermediates/cxx/Debug/68693d4i/obj/armeabi-v7a/libprocessimg.so	bb1ede0f26a0c80f
-0	1047	1771157628848289886	build.ninja	7ed4208b59c5c46a
-3	1270	1771157233493780593	CMakeFiles/processimg.dir/src/main/cpp/processimg_neon.cpp.o	28fdceef14c3f7bf
-0	6	0	clean	bd17d29836e984d2
-2	1155	1771157233388777014	CMakeFiles/processimg.dir/src/main/cpp/processimg.cpp.o	fbb644cda4183968
-1	575	1771157656575012945	CMakeFiles/processimg.dir/src/main/cpp/processimg.cpp.o	15080ce2d8498f54
-1	635	1771157656630013176	CMakeFiles/processimg.dir/src/main/cpp/processimg_neon.cpp.o	8872896e9dae6c68
 635	681	1771157656680013385	../../../../build/intermediates/cxx/Debug/68693d4i/obj/armeabi-v7a/libprocessimg.so	a8571e6f2fb6746a
+0	1047	1771157837057086368	build.ninja	7ed4208b59c5c46a
+1	635	1771157656630013176	CMakeFiles/processimg.dir/src/main/cpp/processimg_neon.cpp.o	8872896e9dae6c68
+0	6	0	clean	bd17d29836e984d2
+1	575	1771157656575012945	CMakeFiles/processimg.dir/src/main/cpp/processimg.cpp.o	15080ce2d8498f54
