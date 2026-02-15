@@ -462,7 +462,7 @@ static void convertYUV420_NV21toRGB8888Parallel(const unsigned char * data, int 
 
 // Native function called from Java to process a image
 extern "C"
-void Java_es_uma_asenjo_DemoGoingFaster_MainActivity_YUVtoNative( JNIEnv* env, jobject thiz,
+void Java_es_ual_bermejo_DemoGoingFaster_MainActivity_YUVtoNative( JNIEnv* env, jobject thiz,
                                                                       jint tipo,
                                                                       jbyteArray data,
                                                                       jintArray result,
@@ -504,7 +504,7 @@ void Java_es_uma_asenjo_DemoGoingFaster_MainActivity_YUVtoNative( JNIEnv* env, j
 
 // Native function called from Java to process a image in parallel using nthreads threads
 extern "C"
-void Java_es_uma_asenjo_DemoGoingFaster_MainActivity_YUVtoNativeParallel( JNIEnv* env, jobject thiz,
+void Java_es_ual_bermejo_DemoGoingFaster_MainActivity_YUVtoNativeParallel( JNIEnv* env, jobject thiz,
                                                                               jint tipo,
                                                                               jbyteArray data,
                                                                               jintArray result,jint divisor, jbyteArray matrix,
@@ -539,7 +539,7 @@ void Java_es_uma_asenjo_DemoGoingFaster_MainActivity_YUVtoNativeParallel( JNIEnv
 
 // Native function called from Java to process an image in parallel using nthreads threads
 extern "C"
-void Java_es_uma_asenjo_DemoGoingFaster_MainActivity_YUVtoNativeParallelOMP( JNIEnv* env, jobject thiz,
+void Java_es_ual_bermejo_DemoGoingFaster_MainActivity_YUVtoNativeParallelOMP( JNIEnv* env, jobject thiz,
                                                                                  jint tipo,
                                                                                  jbyteArray data,
                                                                                  jintArray result, jint divisor, jbyteArray matrix,

@@ -44,6 +44,6 @@ find_library( # Sets the name of the path variable.
 target_link_libraries( # Specifies the target library.
                        processimg
 
-                       # Links the target library to the log library
-                       # included in the NDK.
+                       # Links the target library to the log and OpenMP libraries.
+                       -fopenmp
                        ${log-lib} )

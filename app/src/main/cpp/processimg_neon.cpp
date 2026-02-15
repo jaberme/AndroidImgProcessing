@@ -568,7 +568,7 @@ static int convertYUV420_Convolution_NEON(unsigned char * data, int * pixels, in
 
 // Native function called from Java to process an image in parallel using nthreads threads
 extern "C"
-    void Java_es_uma_asenjo_DemoGoingFaster_MainActivity_YUVtoNativeNEON( JNIEnv* env, jobject thiz,
+    void Java_es_ual_bermejo_DemoGoingFaster_MainActivity_YUVtoNativeNEON( JNIEnv* env, jobject thiz,
                                                                                              jint tipo,
                                                                                              jbyteArray data,
                                                                                              jintArray result,
@@ -626,14 +626,14 @@ extern "C"
     }
 
 extern "C"
-    jboolean Java_es_uma_asenjo_DemoGoingFaster_MainActivity_isNEONSupported( JNIEnv* env, jobject thiz)
+    jboolean Java_es_ual_bermejo_DemoGoingFaster_MainActivity_isNEONSupported( JNIEnv* env, jobject thiz)
     {
         return JNI_TRUE;
     }
 #else
 // Native function called from Java to process an image in parallel using nthreads threads
 extern "C"
-void Java_es_uma_asenjo_DemoGoingFaster_MainActivity_YUVtoNativeNEON( JNIEnv* env, jobject thiz,
+void Java_es_ual_bermejo_DemoGoingFaster_MainActivity_YUVtoNativeNEON( JNIEnv* env, jobject thiz,
                                                                                   jint tipo,
                                                                                   jbyteArray data,
                                                                                   jintArray result,
@@ -646,7 +646,7 @@ void Java_es_uma_asenjo_DemoGoingFaster_MainActivity_YUVtoNativeNEON( JNIEnv* en
 
 
 extern "C"
-jboolean Java_es_uma_asenjo_DemoGoingFaster_MainActivity_isNEONSupported( JNIEnv* env, jobject thiz)
+jboolean Java_es_ual_bermejo_DemoGoingFaster_MainActivity_isNEONSupported( JNIEnv* env, jobject thiz)
 {
     return JNI_FALSE;
 }

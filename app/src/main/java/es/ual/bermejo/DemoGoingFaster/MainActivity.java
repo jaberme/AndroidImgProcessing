@@ -18,10 +18,16 @@ import android.widget.CheckBox;
 import android.widget.RadioButton;
 import android.widget.TextView;
 import java.io.IOException;
-import es.uma.asenjo.DemoGoingFaster.Support.MySurfaceHolderCallback;
+import es.ual.bermejo.DemoGoingFaster.Support.MySurfaceHolderCallback;
 
 @SuppressWarnings("deprecation")
 public class MainActivity extends AppCompatActivity {
+
+    // Load native library when this class is loaded by the loader class
+    static {
+        System.loadLibrary("omp");
+        System.loadLibrary("processimg");
+    }
 
     Camera cam;                                 // Android camera object to interact with
     int camid = 0;                              // Android camera identifier to obtain camera object
@@ -68,7 +74,7 @@ public class MainActivity extends AppCompatActivity {
         setCheckBoxes();                                                // Setup of all CheckBoxes
 
         mscb = new MySurfaceHolderCallback();
-        SurfaceView sv = (SurfaceView) findViewById(R.id.surfaceView);  // Surface that shows the camera preview
+        SurfaceView sv = (SurfaceView) findViewById(R.id.surfaceView);
         sv.getHolder().addCallback(mscb);                               // Add callback to know if surface holder is ready
 
         SurfaceHolder surf2 = ((SurfaceView) findViewById(R.id.surfaceView2)).getHolder();  // A second surface that shows processed frames
@@ -130,7 +136,7 @@ public class MainActivity extends AppCompatActivity {
                 Log.d("HOOK", "Can't access camera " + camid);
                 return;
             }
-            rotation = Support.setCameraDisplayOrientation(this, camid);    // calculate the rotation that should be applied to the camera frames
+            rotation = SupportUtil.setCameraDisplayOrientation(this, camid);    // calculate the rotation that should be applied to the camera frames
             cam.setDisplayOrientation(rotation);                    // apply this rotation to the camera frames
             Camera.Parameters parameters = cam.getParameters();
             lastformat = parameters.getPreviewFormat();
@@ -218,7 +224,7 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         protected Void doInBackground (Void... voids) {
-            //Log.d("HOOK", "doInBackground ...");
+            //Log.d("HOOK", "doInBackground ...
             long t0=0,t1=0;
             switch (getCheckedActionRB()) {                 // select the image processing algorithm
                 case 1:                                     // RGB
@@ -355,7 +361,7 @@ public class MainActivity extends AppCompatActivity {
                     if (procImage2 == null)
                         procImage2 = new int[canvH*canvW];  // create global array to store transformed RGB image
                     // downscale and rotate RGB image (procImage --> procImage2)
-                    Support.downscaleAndRotateImage(procImage, procImage2, lastwidth, lastheight, canvW, canvH, rotation);
+                    SupportUtil.downscaleAndRotateImage(procImage, procImage2, lastwidth, lastheight, canvW, canvH, rotation);
                     if (resultBitmap == null)
                         // create global Bitmap (to show on surf2) from procImage2
                         resultBitmap = Bitmap.createBitmap(canvW, canvH, android.graphics.Bitmap.Config.ARGB_8888);
@@ -373,7 +379,7 @@ public class MainActivity extends AppCompatActivity {
                     if(histogramCB.isChecked()) {
                         if (histogram == null)
                             histogram = new int[256];
-                        histogram = Support.histogram(data,lastwidth,lastheight);
+                        histogram = SupportUtil.histogram(data,lastwidth,lastheight);
 
                         // pinta el histograma
                         Paint paint = new Paint();
@@ -415,11 +421,6 @@ public class MainActivity extends AppCompatActivity {
     public native void YUVtoNativeParallelOMP(int tipo,byte[] data, int[] result,int divisor, byte[]matrix, int width, int height, int nthr);
     public native void YUVtoNativeNEON(int tipo, byte[] data, int[] result,int divisor,byte[]matrix, int width, int height, int nthreads);
     private native boolean isNEONSupported();
-
-    // Load native library when this class is loaded by the loader class
-    static {
-        System.loadLibrary("processimg");
-    }
 
 
     /***  GUI related methods  ***/

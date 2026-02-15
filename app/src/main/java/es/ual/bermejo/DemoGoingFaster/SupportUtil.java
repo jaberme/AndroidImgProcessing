@@ -10,7 +10,7 @@ import android.view.Surface;
  * Created by corbera on 6/11/15.
  */
 @SuppressWarnings("deprecation")
-public class Support {
+public class SupportUtil {
 
     /* Class to know if a SurfaceView (its Holder) is ready */
     public static class MySurfaceHolderCallback implements android.view.SurfaceHolder.Callback

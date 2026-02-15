@@ -1,4 +1,4 @@
-package es.uma.asenjo.DemoGoingFaster.Support;
+package es.ual.bermejo.DemoGoingFaster.Support;
 
 import android.view.SurfaceHolder;
 

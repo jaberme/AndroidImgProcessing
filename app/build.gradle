@@ -15,7 +15,7 @@ android {
         externalNativeBuild {
             cmake {
                 cppFlags "-std=c++11 -O3"
-                abiFilters  'armeabi-v7a'
+                abiFilters  'armeabi-v7a', 'arm64-v8a', 'x86_64'
             }
         }
     }
@@ -30,10 +30,27 @@ android {
             path "CMakeLists.txt"
         }
     }
+    packagingOptions {
+        jniLibs {
+            useLegacyPackaging = true
+        }
+    }
 }
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     testImplementation 'junit:junit:4.12'
     implementation 'androidx.appcompat:appcompat:1.7.1'
+
+    constraints {
+        implementation("org.jetbrains.kotlin:kotlin-stdlib:1.8.22") {
+            because("Align all Kotlin standard library versions")
+        }
+        implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.8.22") {
+            because("Align all Kotlin standard library versions")
+        }
+        implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.8.22") {
+            because("Align all Kotlin standard library versions")
+        }
+    }
 }
